@@ -1,19 +1,39 @@
 <html>
   <head>
     <style>
-      body {
-        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      }
+      <!-- TODO: Add reset -->
 
       .message {
         padding: 10px;
-        font-size: 18px;
         overflow: scroll;
       }
 
       body {
+        font-size: 18px;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         width: 400px;
         height: 100px;
+      }
+
+      button {
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+      }
+
+      button:focus, button:hover {
+        background-color: #e6e6e6;
+        border-color: #adadad;
+        outline: 0;
+      }
+
+      input {
+        font-size: 18px;
+      }
+
+      input:focus {
+        outline: 0;
       }
     </style>
     <script src="jquery-1.11.1.min.js"></script>
