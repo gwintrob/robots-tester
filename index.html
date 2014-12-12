@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+
+      .message {
+        padding: 10px;
+        font-size: 18px;
+        overflow: scroll;
+      }
+
+      body {
+        width: 400px;
+        height: 100px;
+      }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="entry.js"></script>
+    <script src="rule_line.js"></script>
+    <script src="robot_parser.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div>
+      <input id="input-agent" type="text">
+      <button id="button-test">Test</button>
+    </div>
+    <div class="message status"></div>
+    <div class="message result"></div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name" : "Robots Tester",
+  "version" : "0.1",
+  "description" : "Test the current page's robots.txt against a user-agent",
+  "permissions": [ "tabs", "storage", "http://*/*", "https://*/*" ],
+  "icons": { "16": "bot.png", "48": "bot.png", "128": "bot.png" },
+  "browser_action": {
+    "default_icon": "bot.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "manifest_version": 2
+}
