@@ -21,13 +21,13 @@ Entry.prototype.toString = function () {
   return result.join('');
 };
 
-Entry.prototype.appliesTo = function (agent) {
+Entry.prototype.appliesTo = function (userAgent) {
   var self = this;
-  var agentName = agent.split('/')[0].toLowerCase();
+  var agentName = userAgent.split('/')[0].toLowerCase();
 
   var result = false;
   this.userAgents.forEach(function (agent) {
-    agent = agent.toLowerCase();
+    agent = agent.split('/')[0].toLowerCase();
     if (agent === '*' || agentName.indexOf(agent) > -1) result = true;
   });
 

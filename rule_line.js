@@ -10,20 +10,22 @@ function RuleLine(path, allowance) {
     rePathString = rePathString.replace(c, '\\' + c);
   });
 
+  rePathString = rePathString.replace('*', '.*') + '.*';
   if (rePathString.length > 0 && rePathString[0] !== '/') {
     rePathString = '.*' + rePathString;
   }
 
-  this.rePath = new RegExp(rePathString);
+  this.rePath = new RegExp(rePathString, 'i');
   this.allowance = allowance;
 }
 
 RuleLine.prototype.appliesTo = function(name) {
   var self = this;
+
   return (
     self.path === '*' ||
     name.indexOf(self.path) === 0 ||
-    name.match(self.rePath)
+    decodeURIComponent(name).match(self.rePath)
   );
 };
 

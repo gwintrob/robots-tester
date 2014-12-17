@@ -26,9 +26,6 @@ RobotParser.prototype.parse = function (lines) {
   var entry = new Entry();
 
   lines.forEach(function (line) {
-    // console.log(line);
-    // console.log(state);
-    // console.log(entry);
     lineNumber += 1;
 
     if (!line) {

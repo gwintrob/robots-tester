@@ -25,7 +25,7 @@ function test() {
         }
       },
       error: function (jqXHR, textStatus, errorThrown) {
-        $('.result').text('Error: Could not download.');
+        $('.result').text('Allowed - Could not download.');
       }
     });
   });
